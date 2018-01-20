@@ -5,7 +5,7 @@ import {
   Text,
   View
 } from 'react-native';
-import Receipts from './receipts';
+import Receipts from './src/receipts';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -20,7 +20,9 @@ export default class App extends Component<{}> {
       <View style={styles.bluebackground1}>
         <View style={styles.bluebackground1} />
         <View style={styles.bluebackground2} />
-        <View style={styles.bluebackground3} />
+        <View style={styles.bluebackground3}>
+          <Receipts />
+        </View>
       </View>
     );
   }
