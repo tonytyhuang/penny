@@ -6,21 +6,33 @@ import {
   Text,
   View
 } from 'react-native';
+import { Container, Header, Content, Footer, FooterTab, Button, Icon } from 'native-base';
 
-export default class NavBar extends Component<{}> {
+export default class FooterTabsIconExample extends Component {
     render() {
         return (
-            <View style={{flex: 1, flexDirection: 'row'}}>
-                <Image
-                   style={styles.iconsize} source={require('./img/piggybank.png')} resizeMode="contain"
-                />
-                <Image
-                   style={styles.iconsize} source={require('./img/home.png')} resizeMode="contain"
-                />
-                <Image
-                   style={styles.iconsize} source={require('./img/barchart.png')} resizeMode="contain"
-                />
-            </View>
+            <Container style={{backgroundColor: '#FEEDA4'}}>
+                <Content />
+                <Footer style={{backgroundColor: '#FEEDA4'}}>
+                    <FooterTab>
+                        <Button>
+                            <Image
+                                style={styles.iconsize} source={require('./img/piggybank.png')} resizeMode="contain"
+                            />
+                        </Button>
+                        <Button>
+                            <Image
+                                style={styles.iconsize} source={require('./img/home.png')} resizeMode="contain"
+                            />
+                        </Button>
+                        <Button active>
+                            <Image
+                                style={styles.iconsize} source={require('./img/barchart.png')} resizeMode="contain"
+                            />
+                        </Button>
+                    </FooterTab>
+                </Footer>
+            </Container>
         );
     }
 }
@@ -28,8 +40,8 @@ export default class NavBar extends Component<{}> {
 const styles = StyleSheet.create({
   iconsize: {
     flex: 1,
-    height: undefined,
-    width: undefined
+    height: 25,
+    width: 25
   }
 });
 
