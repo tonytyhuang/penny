@@ -24,23 +24,27 @@ export default class Intro extends Component<{}> {
                     style={styles.logosize} source={require('./../src/img/logo.png')} resizeMode="contain"
                     />
                 </View>
-                <View style={styles.loginbackground}>
-                    <Button
-                        style={styles.loginform}
-                        onPress={() => {
-                            ;
-                        }}
-                        title="Login"
-                    />
-                </View>
-                <View style={styles.signupbackground}>
-                    <Button
-                        style={styles.loginform}
-                        onPress={() => {
-                            ;
-                        }}
-                        title="Sign Up"
-                    />
+                <View style={styles.introrow}>
+                    <View style={styles.loginbackground}>
+                        <Button
+                            style={styles.loginform}
+                            onPress={() => {
+                                ;
+                            }}
+                            title="Login"
+                            color="#333333"
+                        />
+                    </View>
+                    <View style={styles.signupbackground}>
+                        <Button
+                            style={styles.loginform}
+                            onPress={() => {
+                                ;
+                            }}
+                            title="Sign Up"
+                            color="#333333"
+                        />
+                    </View>
                 </View>
             </View>
         );
@@ -52,11 +56,19 @@ const styles = StyleSheet.create({
     backgroundColor: '#FEEDA4',
     flex: 1,
   },
+  introrow: {
+    flexDirection: 'row',
+    height: 150,
+  },
   loginbackground: {
+    justifyContent:'center',
+    alignItems:'center', 
     backgroundColor: '#C8E4D1',
     flex: 1,
   },
   signupbackground: {
+    justifyContent:'center',
+    alignItems:'center',
     backgroundColor: '#8BD8B1',
     flex: 1,
   },
@@ -69,7 +81,6 @@ const styles = StyleSheet.create({
   loginform: {
       alignSelf: 'center',
       height: 50,
-      fontSize: 20,
-      color: '#333333',
+      fontSize: 50,
   }
 });
