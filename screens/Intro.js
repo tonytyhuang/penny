@@ -21,7 +21,7 @@ export default class Intro extends Component<{}> {
             <View style={styles.introbackground}>
                 <View style={styles.introbackground}>
                     <Image
-                    style={styles.logosize} source={require('./src/img/logo.png')} resizeMode="contain"
+                    style={styles.logosize} source={require('./../src/img/logo.png')} resizeMode="contain"
                     />
                 </View>
                 <View style={styles.loginbackground}>

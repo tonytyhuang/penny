@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import Intro from './Intro';
+import Intro from './screens/Intro';
 
 AppRegistry.registerComponent('penny', () => Intro);
