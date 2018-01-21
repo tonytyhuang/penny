@@ -1,58 +1,71 @@
 import React, { Component } from 'react';
 import {
-  Platform,
   StyleSheet,
+  AppRegistry,
+  ScrollView,
+  Image,
   Text,
   View
 } from 'react-native';
-import Receipts from './src/receipts';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
-export default class App extends Component<{}> {
-  render() {
-    return (
-      <View style={styles.bluebackground1}>
-        <View style={styles.bluebackground1} />
-        <View style={styles.bluebackground2} />
-        <View style={styles.bluebackground3}>
-          <Receipts />
-        </View>
-      </View>
-    );
+const receipts = [
+  {
+     storeName: "Indigo",
+     date: "November 14, 2017",
+     price: 24.60
+  },
+  {
+    storeName: "Whole Foods Market",
+    date: "January 7, 2018",
+    price: 50.00
   }
-}
+ ]
+ import { View, Text, Image } from 'react-native'
+ import { Card, ListItem, Button } from 'react-native-elements'
+ 
+ // implemented without image with header
+ <Card>
+   {
+     receipts.map((u, i) => {
+       return (
+         <View key={i} style={styles.receipts}>
+           <Text style={styles.storeName}>{u.storeName}</Text>
+           <Text style={styles.date}>{u.date}</Text>
+           <Text style={styles.price}>{u.price}</Text>
+         </View>
+       );
+     })
+   }
+ </Card>
+ 
+ // implemented without image without header, using ListItem component
+  <Card containerStyle={{padding: 0}} >
+   {
+     receipts.map((u, i) => {
+       return (
+         <ListItem
+           key={i}
+           storeName={u.storeName}
+           date={u.date}
+           price={u.price}
+         />
+       );
+     })
+   }
+ </Card>
+<Card>
+  title='HELLO WORLD'
+  image={require('../images/pic2.jpg')}>
+  <Text style={{marginBottom: 10}}>
+  </Text>
+  <Button
+    icon={{name: 'code'}}
+    backgroundColor='#03A9F4'
+    fontFamily='Lato'
+    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+    title='VIEW NOW' />
+ </Card>
 
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-  },
-  bluebackground1: {
-    backgroundColor: '#333333',
-    flex: 1,
-  },
-  bluebackground2: {
-    backgroundColor: 'skyblue',
-    flex: 2,
-  },
-  bluebackground3: {
-    backgroundColor: '#333333',
-    flex: 3,
-  }
-});
+AppRegistry.registerComponent(
+  'penny',
+  () => App);

@@ -12,13 +12,13 @@ export default class NavBar extends Component<{}> {
         return (
             <View style={{flex: 1, flexDirection: 'row'}}>
                 <Image
-                    source={require('/react-native/img/favicon.png')}
+                   style={styles.iconsize} source={require('./img/piggybank.png')} resizeMode="contain"
                 />
                 <Image
-                    source={require('/react-native/img/favicon.png')}
+                   style={styles.iconsize} source={require('./img/home.png')} resizeMode="contain"
                 />
                 <Image
-                    source={require('/react-native/img/favicon.png')}
+                   style={styles.iconsize} source={require('./img/barchart.png')} resizeMode="contain"
                 />
             </View>
         );
@@ -27,7 +27,9 @@ export default class NavBar extends Component<{}> {
 
 const styles = StyleSheet.create({
   iconsize: {
-    height: 15,
+    flex: 1,
+    height: undefined,
+    width: undefined
   }
 });
 
