@@ -6,34 +6,13 @@ import {
     Image,
     View
 } from 'react-native';
-import NavBar from './../src/navbar';
-import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
 
-export default class Budget extends Component {
+class Budget extends Component {
     render() {
-        return (
-            <Container>
-                <Header style={{ backgroundColor: '#FEEDA4' }}>
-                    <Image
-                        style={{ width: 50, height: 50 }}
-                        source={require('./../src/img/logo.png')}
-                    />
-                </Header>
-                <Content style={{ backgroundColor: '#FEEDA4' }}>
-                    <Card>
-                        <CardItem style={{ backgroundColor: '#C8E4D1' }}>
-                            <Body>
-                                <Text>
-                                    Your text here
-                </Text>
-                            </Body>
-                        </CardItem>
-                    </Card>
-                </Content>
-                <NavBar style={{ flexDirection: 'column', justifyContent: 'space-between' }} />
-            </Container>
+        return(
+            <Text>1, 2, 3</Text>
         );
-    }
+    };
 }
 
 AppRegistry.registerComponent(
