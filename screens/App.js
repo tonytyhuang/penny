@@ -4,67 +4,37 @@ import {
   AppRegistry,
   ScrollView,
   Image,
-  Text,
   View
 } from 'react-native';
+import NavBar from './../src/navbar';
+import { Container, Header, Content, Card, CardItem, Body, Text } from 'native-base';
 
-const receipts = [
-  {
-     storeName: "Indigo",
-     date: "November 14, 2017",
-     price: 24.60
-  },
-  {
-    storeName: "Whole Foods Market",
-    date: "January 7, 2018",
-    price: 50.00
+export default class App extends Component {
+  render() {
+    return (
+      <Container>
+        <Header style={{backgroundColor: '#FEEDA4'}}>
+          <Image
+            style={{width: 50, height: 50}}
+            source={require('./../src/img/logo.png')}
+          />
+        </Header>
+        <Content style={{backgroundColor: '#FEEDA4'}}>
+          <Card>
+            <CardItem style={{backgroundColor: '#C8E4D1'}}>
+              <Body>
+                <Text>
+                Your text here
+                </Text>
+              </Body>
+            </CardItem>
+          </Card>
+        </Content>
+        <NavBar style={{flexDirection: 'column', justifyContent: 'space-between'}} />
+      </Container>
+    );
   }
- ]
- import { View, Text, Image } from 'react-native'
- import { Card, ListItem, Button } from 'react-native-elements'
- 
- // implemented without image with header
- <Card>
-   {
-     receipts.map((u, i) => {
-       return (
-         <View key={i} style={styles.receipts}>
-           <Text style={styles.storeName}>{u.storeName}</Text>
-           <Text style={styles.date}>{u.date}</Text>
-           <Text style={styles.price}>{u.price}</Text>
-         </View>
-       );
-     })
-   }
- </Card>
- 
- // implemented without image without header, using ListItem component
-  <Card containerStyle={{padding: 0}} >
-   {
-     receipts.map((u, i) => {
-       return (
-         <ListItem
-           key={i}
-           storeName={u.storeName}
-           date={u.date}
-           price={u.price}
-         />
-       );
-     })
-   }
- </Card>
-<Card>
-  title='HELLO WORLD'
-  image={require('../images/pic2.jpg')}>
-  <Text style={{marginBottom: 10}}>
-  </Text>
-  <Button
-    icon={{name: 'code'}}
-    backgroundColor='#03A9F4'
-    fontFamily='Lato'
-    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-    title='VIEW NOW' />
- </Card>
+}
 
 AppRegistry.registerComponent(
   'penny',
