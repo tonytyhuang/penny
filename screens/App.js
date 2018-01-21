@@ -7,6 +7,7 @@ import {
   Text,
   View
 } from 'react-native';
+import { Card, ListItem, Button } from 'react-native-elements'
 
 const receipts = [
   {
@@ -20,12 +21,9 @@ const receipts = [
     price: 50.00
   }
  ]
- import { View, Text, Image } from 'react-native'
- import { Card, ListItem, Button } from 'react-native-elements'
  
  // implemented without image with header
  <Card>
-   {
      receipts.map((u, i) => {
        return (
          <View key={i} style={styles.receipts}>
@@ -35,7 +33,6 @@ const receipts = [
          </View>
        );
      })
-   }
  </Card>
  
  // implemented without image without header, using ListItem component

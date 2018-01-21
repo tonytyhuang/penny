@@ -8,6 +8,7 @@
     "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android"
   },
   "dependencies": {
+    "native-base": "^2.3.7",
     "react": "16.2.0",
     "react-native": "0.52.0",
     "react-native-camera": "^0.6.0",
