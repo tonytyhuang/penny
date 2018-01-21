@@ -28,6 +28,15 @@ export default class App extends Component {
                 </Text>
               </Body>
             </CardItem>
+            <CardItem>
+              <Text>Google Plus</Text>
+              <Right>
+              <Image
+                style={{width: 15, height: 15}}
+                source={require('./../src/img/arrow.png')}
+             />
+              </Right>
+             </CardItem>
           </Card>
         </Content>
         <NavBar style={{flexDirection: 'column', justifyContent: 'space-between'}} />
